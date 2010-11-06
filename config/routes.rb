@@ -1,6 +1,7 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resource :account, :controller => "users"
-  map.resources :users
-  map.resource :user_session
-  map.root :controller => "user_sessions", :action => "new"
+AuthlogicExample::Application.routes.draw do
+  resource :account, :controller => "users"
+  resources :users
+  resource :user_session
+  root :to => "user_sessions#new"
+  #root :to => "welcome#index"
 end
